@@ -1,0 +1,21 @@
+body {
+    /*   background-image: url("https://unsplash.com/photos/qCrKTET_09o"); */
+      height: 400px;
+      width: 600px;
+      margin: 25px 25px;
+      background-color: gray;
+    }
+
+section {
+    /*   background-image: url("https://unsplash.com/photos/qCrKTET_09o"); */
+
+    }
+
+h1 {
+      background-color: lightblue;
+      border-style: solid;
+      border-width: medium;
+    /* Make the h1 round and center the text   */
+      border-radius: 25px;
+      text-align: center;
+    }
