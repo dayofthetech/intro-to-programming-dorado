@@ -6,11 +6,6 @@ body {
       background-color: gray;
     }
 
-section {
-    /*   background-image: url("https://unsplash.com/photos/qCrKTET_09o"); */
-
-    }
-
 h1 {
       background-color: lightblue;
       border-style: solid;
@@ -19,3 +14,23 @@ h1 {
       border-radius: 25px;
       text-align: center;
     }
+
+/* make the social links round and no bullet point */
+ul.social {
+    list-style-type: none;
+    width: auto;
+    /* border-style: solid; - Creates the border outside the dot, I want each individial dot
+    Solve by adding id to each li element*/
+}
+
+#social-link {
+    border-style: solid;
+    border-radius: 25px;
+    border-color: lightblue;
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+    text-justify: auto;
+    text-align: center;
+    /* I would like to change the text of the link, but I think that will be an id for the a tag */
+}
