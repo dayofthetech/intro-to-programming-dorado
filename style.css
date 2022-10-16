@@ -1,3 +1,5 @@
+/*The bullet points are not in line*/
+
 body {
     /*   background-image: url("https://unsplash.com/photos/qCrKTET_09o"); */
       height: 400px;
@@ -14,6 +16,14 @@ h1 {
       border-radius: 25px;
       text-align: center;
     }
+h2 {
+  background-color: lightblue;
+      border-style: solid;
+      border-width: medium;
+      border-radius: 25px;
+      text-align: center;
+}
+
 
 /* make the social links round and no bullet point */
 ul.social {
@@ -33,4 +43,9 @@ ul.social {
     text-justify: auto;
     text-align: center;
     /* I would like to change the text of the link, but I think that will be an id for the a tag */
+}
+
+#footer {
+  text-align: center;
+  /* border-style: solid; <- this helps visualize where in the html the element is located*/
 }
