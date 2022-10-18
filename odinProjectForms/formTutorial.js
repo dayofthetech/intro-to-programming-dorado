@@ -57,5 +57,6 @@ form.addEventListener("submit", function (event) {
 	if (nameValid && emailValid) {
 		alert("Demo only. No form was posted.");
 	}
+	console.log(nameValid.innerText);
+	console.log(nameValid);
 });
-
