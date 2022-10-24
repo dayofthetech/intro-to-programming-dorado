@@ -1,7 +1,92 @@
+/* For this assignment, there are some general requirements but the design is up to you! This is your chance to be creative and transform your webpage into a reflection of who you are.
+
+ [X] Change the background color of the page body
+ [X] Change the default text color
+ [X] Customize the font family
+(Optional) Load in a font family from Google Fonts
+ [X] Add spacing (padding/margin) between sections
+ [X] Change the font size, weight, and color of all headings
+ [] Transform the "Experience" list items into styled blocks
+ [] Transform the "Skills" list items into styled blocks
+ [] Style the "Leave a Message" form elements
+[X] Change font size and color of labels
+[] Change font size, padding, border, etc. of inputs and textarea
+[] Add spacing (padding/margin) between form fields
+[] Change padding, background color, border, etc. of submit button
+ [] Transform the "Messages" list items into styled blocks and customize the button(s)
+ [] Change the spacing and background color of the footer
+ [X] Use Media Queries to make sure the webpage is responsive for all device sizes (mobile, tablet, desktop, etc.) */
+
+body {
+    /* Adjust the elements according to screen size */
+    background: url(/img/project2.jpg) no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    color: azure;
+    }
+
+
+section {
+    padding: 20px;
+    margin: 5px;
+}
+
+h1 {
+      background-color: lightblue;
+      border-style: solid;
+      border-width: medium;
+    /* Make the h1 round and center the text   */
+      border-radius: 25px;
+      text-align: center;
+      font-size: large;
+      font-weight: bolder;
+      color: orange;
+    }
+h2 {
+  background-color: lightblue;
+      border-style: solid;
+      border-width: medium;
+      border-radius: 25px;
+      text-align: center;
+}
+
+
+/* li {
+
+} */
+
+
+/* make the social links round and no bullet point */
+ul.social {
+    list-style-type: none;
+    width: auto;
+    /* border-style: solid; - Creates the border outside the dot, I want each individial dot
+    Solve by adding id to each li element*/
+}
+
+#social-link {
+    border-style: solid;
+    border-radius: 25px;
+    border-color: lightblue;
+    width: 150px;
+    padding: 5px;
+    margin: 5px;
+    text-justify: auto;
+    text-align: center;
+    /* I would like to change the text of the link, but I think that will be an id for the a tag */
+}
+
+#footer {
+  text-align: center;
+  padding: 2px;
+  border-top: white solid;
+  /* border-style: solid; <- this helps visualize where in the html the element is located*/
+}
+
 form {
 /* Center the form on the page */
     margin: 0 auto;
-    width: 400px;
+    width: auto;
     /* Form outline */
     padding: 1em;
     border: 1px solid #ccc;
@@ -9,6 +94,7 @@ form {
 }
 
 ul {
+    /* changing bg color here changes the social links */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -20,9 +106,11 @@ margin-top: 1em;
 
 label {
 /* Uniform size & alignment */
+color: black;
 display: inline-block;
 width: 90px;
 text-align: right;
+font-size: medium;
 }
 
 input,
@@ -37,6 +125,9 @@ box-sizing: border-box;
 
 /* Match form field borders */
 border: 1px solid #999;
+
+margin: 2px;
+padding: 5px;
 }
 
 input:focus,
@@ -62,4 +153,5 @@ button {
 /* This extra margin represent roughly the same space as the space
    between the labels and their text fields */
 margin-left: 0.5em;
+background-color: orange;
 }
