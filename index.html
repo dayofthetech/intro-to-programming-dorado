@@ -5,85 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Google Font Pixel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Alberto project</title>
-    <style>
-      form {
-/* Center the form on the page */
-margin: 0 auto;
-width: 400px;
-/* Form outline */
-padding: 1em;
-border: 1px solid #ccc;
-border-radius: 1em;
-}
-
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-
-form li + li {
-margin-top: 1em;
-}
-
-label {
-/* Uniform size & alignment */
-display: inline-block;
-width: 90px;
-text-align: right;
-}
-
-input,
-textarea {
-/* To make sure that all text fields have the same font settings
-   By default, textareas have a monospace font */
-font: 1em sans-serif;
-
-/* Uniform text field size */
-width: 300px;
-box-sizing: border-box;
-
-/* Match form field borders */
-border: 1px solid #999;
-}
-
-input:focus,
-textarea:focus {
-/* Additional highlight for focused elements */
-border-color: #000;
-}
-
-textarea {
-/* Align multiline text fields with their labels */
-vertical-align: top;
-
-/* Provide space to type some text */
-height: 5em;
-}
-
-.button {
-/* Align buttons with the text fields */
-padding-left: 90px; /* same size as the label elements */
-}
-
-button {
-/* This extra margin represent roughly the same space as the space
-   between the labels and their text fields */
-margin-left: 0.5em;
-}
-    </style>
 </head>
   <body>
-      <section>
-          <h1>About</h1>
-          <p>I like to watch soccer, I'm excited for the world cup. I like to watch anime, currently watching Hunter x Hunter and MHA</p>
-        </section>
+    <!-- Create a nav with a navigation class https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/-->
+    <nav class="navbar">
+      <!-- navigation menu -->
+      <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+       <input type="checkbox" id="checkbox_toggle" />
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+       <!-- NAVIGATION MENUS -->
+        <div class="menu">
+          <li ><a href="#about">Home</a></li>
+          <li ><a href="#about">About</a></li>
+          <li ><a href="#skills">Skills</a></li>
+          <li ><a href="#experience">Experience</a></li>
+          <li ><a href="#projects">Projects</a></li>
+          <li ><a href="#leave_message">Leave Message</a></li>
+        </div>
 
-        <section>
+      </ul>
+    </nav>
+      <section id="about">
+          <h1>About</h1>
+          <p>Entry level software developer, currently a student in Dream The Code cohort where I'm learning HTML, CSS,
+            JavaScript and in the advance class React. I like to learn about new technologies and how it can create a
+            net positive in the community.
+            I like to watch soccer, some of my favorite teams are Manchester City, Barcelona, PSG, I'm looking forward to
+            watch the World Cup!
+            Some of my favorite shows to watch are My Hero Academia, Demon Slayer, Rick and Morty.
+          </p>
+      </section>
+
+        <section id="experience">
           <h1>Experience</h1>
-          <p>I have had five jobs in my career, the latest proffesional experience is</p>
-          <ul>
+          <p>The following list include recent jobs where I have gained knowledge about customer service, time management,
+            tasks prioritization, communication, among others.
+          </p>
+          <ul class="experience">
             <li>DigiDems: Working for a democratic campaign</li>
             <li>Kinetic: Installing and repairing internet connections</li>
             <li>Hamilton: Helping patients get dietary supplements</li>
@@ -91,11 +55,10 @@ margin-left: 0.5em;
         </section>
         <section id="skills">
           <h2>Skills</h2>
-          <ul>
-
+          <ul id="skills-list">
           </ul>
         </section>
-        <section>
+        <section id="connect">
           <h1>Connect</h1>
           <p>Connect with me on social media</p>
           <ul class="social">

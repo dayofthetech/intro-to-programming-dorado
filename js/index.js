@@ -19,6 +19,7 @@ copyright.innerHTML = "Alberto " + thisYear;
 //Using "DOM Manipulation", append the copyright element to the footer
 footer.appendChild(copyright);
 
+// ---------Adding li to lu---------------------
 //List your technical skills by creating an Array of String values and store it in a variable named skills
 //  Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
 //  hint: querySelector or getElementById method
@@ -27,7 +28,8 @@ const skills = ['python', 'javascript', 'design', 'web3']
 
 //Using "DOM Selection", query the skills Section (instead of the entire document)
 //to find the <ul> element and store it in a variable named skillsList
-const skillsList = document.getElementById('#skills');
+const skillsList = document.getElementById('skills-list');
+
 
 // Create a for loop to iterate over your skills Array, starting at index 0
 // Inside the loop, create a new list item (li) element and store it in a variable named skill
@@ -41,9 +43,7 @@ for (let i = 0; i < skills.length; i++) {
 
     //Below - this works as setting the li element to the str
     skill.innerText = skills[i];
-
-    //skill.innerHTML = skills[i];
-    document.getElementById("skills").appendChild(skill);
+    skillsList.appendChild(skill);
 }
 
 // - Solves the problem by adding each str into a li, but it does not uses a loop
@@ -53,6 +53,7 @@ for (let i = 0; i < skills.length; i++) {
 //     li.appendChild(text);
 //     document.getElementById("skills").appendChild(li);
 // })
+// --------------------------------------------------------------------------------
 
 //main action of button
 const btn = document.getElementById('btn');
@@ -97,3 +98,9 @@ btn.addEventListener('click', function(e){
 
 })
 
+const toggleBtn = document.getElementsByClassName('toggle-btn')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleBtn.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active')
+})

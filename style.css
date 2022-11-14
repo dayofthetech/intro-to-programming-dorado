@@ -1,27 +1,38 @@
 /*The bullet points are not in line*/
 
+* {
+  box-sizing: border-box;
+}
 body {
-    /*   background-image: url("https://unsplash.com/photos/qCrKTET_09o"); */
-      height: 400px;
-      width: 600px;
+  /* // pasting the font family from the google fonts - but only want to use the pixel on the headers */
+      /* font-family: 'Press Start 2P', cursive; */
       margin: 25px 25px;
-      background-color: gray;
+      background-color: rgb(90, 73, 200);
+      color: aliceblue;
+      /* box-sizing: border-box; */
     }
 
+    /* Figure a way to style h1 and h2 at the same time */
 h1 {
-      background-color: lightblue;
+      background-color: rgb(0, 0, 0);
       border-style: solid;
       border-width: medium;
     /* Make the h1 round and center the text   */
       border-radius: 25px;
       text-align: center;
+      font-family: 'Press Start 2P';
+      font-size: larger;
+      padding: 15px;
     }
 h2 {
-  background-color: lightblue;
+      background-color: rgb(0, 0, 0);
       border-style: solid;
       border-width: medium;
       border-radius: 25px;
       text-align: center;
+      font-family: 'Press Start 2P';
+      font-size: larger;
+      padding: 15px;
 }
 
 
@@ -32,7 +43,11 @@ ul.social {
     /* border-style: solid; - Creates the border outside the dot, I want each individial dot
     Solve by adding id to each li element*/
 }
-
+ul.experience {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
 #social-link {
     border-style: solid;
     border-radius: 25px;
@@ -49,3 +64,155 @@ ul.social {
   text-align: center;
   /* border-style: solid; <- this helps visualize where in the html the element is located*/
 }
+
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  }
+
+  form li + li {
+  margin-top: 1em;
+  }
+
+  label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+  margin: 3px;
+  }
+
+  input,
+  textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+  }
+
+  input:focus,
+  textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+  }
+
+  textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* Provide space to type some text */
+  height: 5em;
+  }
+
+.button {
+  /* Align buttons with the text fields */
+  padding-left: 90px; /* same size as the label elements */
+  }
+
+button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+    margin-left: 0.5em;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+  }
+
+  a {
+    color: orange;
+  }
+
+
+/* Styling the nav */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: teal;
+  color: #fff;
+}
+
+/* a tag inside a class of nav-links */
+.nav-links a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+  background-color: #4c9e9e;
+  border-radius: 5px;
+  transition: 0.3s ease;
+ }
+ .menu li {
+  padding: 5px 14px;
+ }
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+  display: none;
+ }
+ /*HAMBURGER MENU*/
+ .hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+ }
+ /* APPLYING MEDIA QUERIES */
+ @media (max-width: 670px) {
+ .menu {
+  display:none;
+  position: absolute;
+  background-color:teal;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 16px 0;
+ }
+ .menu li:hover {
+  display: inline-block;
+  background-color:#4c9e9e;
+  transition: 0.3s ease;
+ }
+ .menu li + li {
+  margin-top: 12px;
+ }
+ input[type=checkbox]:checked ~ .menu{
+  display: block;
+ }
+ .hamburger {
+  display: block;
+ }
+ .dropdown {
+  left: 50%;
+  top: 30px;
+  transform: translateX(35%);
+ }
+ .dropdown li:hover {
+  background-color: #4c9e9e;
+ }
+ }
