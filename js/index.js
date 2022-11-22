@@ -101,6 +101,42 @@ btn.addEventListener('click', function(e){
 const toggleBtn = document.getElementsByClassName('toggle-btn')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
-toggleBtn.addEventListener('click', () => {
-    navbarLinks.classList.toggle('active')
-})
+//11/21 - giving error? not sure why
+// toggleBtn.addEventListener('click', () => {
+//     navbarLinks.classList.toggle('active')
+// })
+
+
+var githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/dayofthetech/repos')
+githubRequest.send();
+
+//method one
+// githubRequest.addEventListener('load', function (){
+//     var repositories = JSON.parse(githubRequest.responseText);
+//     console.log(repositories);
+// })
+
+//method two
+githubRequest.onload = function(){
+    var repositories = JSON.parse(githubRequest.responseText);
+    console.log(repositories);
+    renderHTML(repositories);
+}
+
+var projectSection = document.getElementById('projects');
+//you can use querySelector to query within another tag without using
+//the whole document
+var projectList = projectSection.querySelector('ul');
+//console.log(projectList);
+
+//function to create and add html to the page
+function renderHTML(data){
+    //access the json file that is pass as parameter
+    //create li tag with a loop
+    for (i = 0; i < data.length; i++) {
+        var project = document.createElement('li');
+        project.innerText = data[i].name;
+        projectList.appendChild(project);
+    }
+}
