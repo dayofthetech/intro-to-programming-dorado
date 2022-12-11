@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font Pixel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Alberto project</title>
+</head>
+  <body>
+    <!-- Create a nav with a navigation class https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/-->
+    <nav class="navbar">
+      <!-- navigation menu -->
+      <ul class="nav-links">
+        <!-- USING CHECKBOX HACK -->
+       <input type="checkbox" id="checkbox_toggle" />
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+       <!-- NAVIGATION MENUS -->
+        <div class="menu">
+          <li ><a href="#about">Home</a></li>
+          <li ><a href="#about">About</a></li>
+          <li ><a href="#skills">Skills</a></li>
+          <li ><a href="#experience">Experience</a></li>
+          <li ><a href="#projects">Projects</a></li>
+          <li ><a href="#leave_message">Leave Message</a></li>
+        </div>
+
+      </ul>
+    </nav>
+      <section id="about">
+          <h1>About</h1>
+          <p>Entry level software developer, currently a student in Dream The Code cohort where I'm learning HTML, CSS,
+            JavaScript and in the advance class React. I like to learn about new technologies and how it can create a
+            net positive in the community.
+            I like to watch soccer, some of my favorite teams are Manchester City, Barcelona, PSG, I'm looking forward to
+            watch the World Cup!
+            Some of my favorite shows to watch are My Hero Academia, Demon Slayer, Rick and Morty.
+          </p>
+      </section>
+
+        <section id="experience">
+          <h1>Experience</h1>
+          <p>The following list include recent jobs where I have gained knowledge about customer service, time management,
+            tasks prioritization, communication, among others.
+          </p>
+          <ul class="experience">
+            <li>DigiDems: Working for a democratic campaign</li>
+            <li>Kinetic: Installing and repairing internet connections</li>
+            <li>Hamilton: Helping patients get dietary supplements</li>
+          </ul>
+        </section>
+        <section id="skills">
+          <h2>Skills</h2>
+          <ul id="skills-list">
+          </ul>
+        </section>
+        <section id="projects">
+          <h2>Projects</h2>
+          <ul>
+
+          </ul>
+        </section>
+        <section id="connect">
+          <h1>Connect</h1>
+          <p>Connect with me on social media</p>
+          <ul class="social">
+              <!-- There should be a way for me to avoid adding an id to every li
+              I was trying to inheret the class from ul -->
+            <li id="social-link"><a href="https://github.com/dayofthetech">GitHub Profile</a></li>
+            <li id="social-link"><a href="https://twitter.com/dayofthetech">Twitter</a></li>
+            <li id="social-link"><a href="https://www.youtube.com/c/TechWithTim/featured">Favorite Coding YouTube Channel</a></li>
+          </ul>
+        </section>
+        <form id="leave_message">
+          <!-- create 3 divs and inside each div a label input -->
+          <div>
+              <label for="first_name">First Name:</label>
+              <input type="text" id="first_name" placeholder="First name" name="first_name">
+          </div>
+          <div>
+              <label for="email">email:</label>
+              <input type="email" id="email" placeholder="email@" name="email">
+          </div>
+          <div>
+              <label for="message">Message:</label>
+              <textarea id="user_message"></textarea>
+          </div>
+          <button id='btn' type="submit">Submit</button>
+
+        </form>
+        <!-- Below - section where input will be displayed -->
+        <section id="messages">
+          <h2>Messages</h2>
+          <ul id="messages_box">
+
+          </ul>
+        </section>
+      <footer id="footer"></footer>
+  <!-- Creating the DOM path from html to js  -->
+    <script src="/js/index.js"></script>
+  </body>
+</html>
