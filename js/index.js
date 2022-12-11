@@ -107,9 +107,9 @@ const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 // })
 
 
-var githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/dayofthetech/repos')
-githubRequest.send();
+// var githubRequest = new XMLHttpRequest();
+// githubRequest.open('GET', 'https://api.github.com/users/dayofthetech/repos')
+// githubRequest.send();
 
 //method one
 // githubRequest.addEventListener('load', function (){
@@ -118,11 +118,12 @@ githubRequest.send();
 // })
 
 //method two
-githubRequest.onload = function(){
-    var repositories = JSON.parse(githubRequest.responseText);
-    console.log(repositories);
-    renderHTML(repositories);
-}
+// githubRequest.onload = function(){
+//     var repositories = JSON.parse(githubRequest.responseText);
+//     console.log(repositories);
+//     renderHTML(repositories);
+// }
+
 
 var projectSection = document.getElementById('projects');
 //you can use querySelector to query within another tag without using
@@ -140,3 +141,23 @@ function renderHTML(data){
         projectList.appendChild(project);
     }
 }
+
+//up to this point the console prints
+//(16) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+// fetch('https://api.github.com/users/dayofthetech/repos')
+//     .then(function(response){
+//         return response.json();
+//     }).then(function(response){
+//         console.log(response);
+//     })
+
+//working - in this scenario data is the json array, but why?
+//since what was parse as json was called response
+fetch('https://api.github.com/users/dayofthetech/repos')
+    .then(function(response){
+        //so this is considered a promise
+        return response.json();
+    }).then(data => {
+        //console.log(data);
+        renderHTML(data);
+    })
